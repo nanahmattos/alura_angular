@@ -12,8 +12,10 @@ export class PensamentoService {
 
   constructor(private http: HttpClient) { }
 
-  listar(): Observable<Pensamento[]> {
-    return this.http.get<Pensamento[]>(this.API)
+  listar(pagina: number): Observable<Pensamento[]> {
+    const itensPorPagina = 6
+    //GET /posts?_page=7&_limit=20
+    return this.http.get<Pensamento[]>(`${this.API}?_page=${pagina}&_limit=${itensPorPagina}`)
     //me da a lista de pensamentos que esta na Api
   }
   criar(pensamento: Pensamento): Observable<Pensamento> {
@@ -29,7 +31,7 @@ export class PensamentoService {
     const url = `${this.API}/${id}`
     return this.http.delete<Pensamento>(url)
   }
-  
+
   buscarPorId(id: number): Observable<Pensamento> {
     const url = `${this.API}/${id}`
     return this.http.get<Pensamento>(url)

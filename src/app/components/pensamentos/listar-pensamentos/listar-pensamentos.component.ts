@@ -9,12 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarPensamentosComponent implements OnInit {
   listarPensamentos: Pensamento[] = [];
-
+  paginaAtual: number = 1
+  haMaisPensamentos: boolean = true
   constructor(private service: PensamentoService) {}
 
   ngOnInit(): void {
-    this.service.listar().subscribe((listarPensamentos) => {
+    this.service.listar(this.paginaAtual).subscribe((listarPensamentos) => {
       this.listarPensamentos = listarPensamentos
+    })
+  }
+
+  carregarMaisPensamentos() {
+    this.service.listar(++this.paginaAtual)
+    .subscribe(listarPensamentos => {
+      this.listarPensamentos.push(...listarPensamentos)
+      if(!this.listarPensamentos.length) {
+        this.haMaisPensamentos = false
+      }
     })
   }
 }
