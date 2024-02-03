@@ -4,38 +4,57 @@
       "id": 1,
       "conteudo": "Hello World!!",
       "autoria": "dev",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": false
     },
     {
       "id": 2,
       "conteudo": "Hello World!!",
       "autoria": "dev",
-      "modelo": "modelo3"
-    },{
+      "modelo": "modelo3",
+      "favorito": false
+    },
+    {
       "id": 3,
       "conteudo": "Hello World!!",
       "autoria": "dev",
-      "modelo": "modelo3"
-    },{
+      "modelo": "modelo3",
+      "favorito": true
+    },
+    {
       "id": 4,
       "conteudo": "Hello World!!",
       "autoria": "dev",
-      "modelo": "modelo3"
-    },{
+      "modelo": "modelo3",
+      "favorito": false
+    },
+    {
       "id": 5,
       "conteudo": "Hello World!!",
       "autoria": "dev",
-      "modelo": "modelo3"
-    },{
+      "modelo": "modelo3",
+      "favorito": false
+    },
+    {
       "id": 6,
       "conteudo": "Hello World!!",
       "autoria": "dev",
-      "modelo": "modelo3"
-    },{
-      "id": 7,
-      "conteudo": "Hello World!!",
-      "autoria": "dev",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": true
+    },
+    {
+      "conteudo": "Eu so sei que nada sei ",
+      "autoria": "alguem",
+      "modelo": "modelo2",
+      "favorito": false,
+      "id": 7
+    },
+    {
+      "conteudo": "Eu só sei que tudo sei ",
+      "autoria": "alguem 2",
+      "modelo": "modelo3",
+      "favorito": false,
+      "id": 8
     }
   ]
 }
